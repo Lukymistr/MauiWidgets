@@ -12,7 +12,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>TimeAndDateWidgetMaui</ApplicationTitle>
+		<ApplicationTitle>Time and date</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.timeanddatewidgetmaui</ApplicationId>
