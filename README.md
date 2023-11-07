@@ -1,6 +1,8 @@
 # TimeAndDateWidgetMaui
  Maui app that shows time and date + have widget
 ### soubory
+- [TimeAndDateWidgetMaui.csproj](TimeAndDateWidgetMaui.csproj)
+   - <ApplicationTitle> -> změna názvu
 - [Platforms](Platforms/)
    - [Android](Platforms/Android/)
       - [Resources](Platforms/Android/Resources/)
