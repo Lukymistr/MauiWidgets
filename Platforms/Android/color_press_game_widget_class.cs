@@ -78,36 +78,26 @@ namespace MauiWidgets.Platforms.Android {
                     // Akce pro kliknutí na zelenou
                     widgetView.SetTextViewText(Resource.Id.color_press_game_widget_color_green, "clicked");
                     intent.SetAction("chosen_green");
-                    PendingIntent pendingIntentGreen = PendingIntent.GetBroadcast(context, 0, intent, PendingIntentFlags.Immutable);
-                    widgetView.SetOnClickPendingIntent(Resource.Id.color_press_game_widget_color_green, pendingIntentGreen);
                     break;
                 case "chosen_blue":
                     // Akce pro kliknutí na modrou
                     widgetView.SetTextViewText(Resource.Id.color_press_game_widget_color_blue, "clicked");
                     intent.SetAction("chosen_blue");
-                    PendingIntent pendingIntentBlue = PendingIntent.GetBroadcast(context, 0, intent, PendingIntentFlags.Immutable);
-                    widgetView.SetOnClickPendingIntent(Resource.Id.color_press_game_widget_color_blue, pendingIntentBlue);
                     break;
                 case "chosen_red":
                     // Akce pro kliknutí na červenou
                     widgetView.SetTextViewText(Resource.Id.color_press_game_widget_color_red, "clicked");
                     intent.SetAction("chosen_red");
-                    PendingIntent pendingIntentRed = PendingIntent.GetBroadcast(context, 0, intent, PendingIntentFlags.Immutable);
-                    widgetView.SetOnClickPendingIntent(Resource.Id.color_press_game_widget_color_red, pendingIntentRed);
                     break;
                 case "chosen_purple":
                     // Akce pro kliknutí na fialovou
                     widgetView.SetTextViewText(Resource.Id.color_press_game_widget_color_purple, "clicked");
                     intent.SetAction("chosen_purple");
-                    PendingIntent pendingIntentPurple = PendingIntent.GetBroadcast(context, 0, intent, PendingIntentFlags.Immutable);
-                    widgetView.SetOnClickPendingIntent(Resource.Id.color_press_game_widget_color_purple, pendingIntentPurple);
                     break;
                 case "chosen_white":
                     // Akce pro kliknutí na bílou
                     widgetView.SetTextViewText(Resource.Id.color_press_game_widget_color_white, "clicked");
                     intent.SetAction("chosen_white");
-                    PendingIntent pendingIntentWhite = PendingIntent.GetBroadcast(context, 0, intent, PendingIntentFlags.Immutable);
-                    widgetView.SetOnClickPendingIntent(Resource.Id.color_press_game_widget_color_white, pendingIntentWhite);
                     break;
                 default:
                     // Element nemá nastavenou onClick funkci
