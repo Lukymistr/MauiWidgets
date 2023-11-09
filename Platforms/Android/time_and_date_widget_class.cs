@@ -18,7 +18,7 @@ namespace MauiWidgets.Platforms.Android {
         /// Něco jako konstruktor, povětšinou 2 první řádky zůstávají stejné.
         /// </summary>
         public override void OnUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-            var me = new ComponentName(context, Java.Lang.Class.FromType(typeof(time_and_date_widget_class)).Name);
+            ComponentName me = new ComponentName(context, Java.Lang.Class.FromType(typeof(time_and_date_widget_class)).Name);
             appWidgetManager.UpdateAppWidget(me, BuildRemoteViews(context));
 
             // Vytvoří a spustí časovač pro aktualizaci widgetu každou 1 sekundu
@@ -32,7 +32,7 @@ namespace MauiWidgets.Platforms.Android {
         /// Metoda BuildRemoteViews vytvoří (aktualizuje) vzhled a fukce widgetu.
         /// </summary>
         private RemoteViews BuildRemoteViews(Context context) {
-            var widgetView = new RemoteViews(context.PackageName, Resource.Layout.time_and_date_widget_layout);
+            RemoteViews widgetView = new RemoteViews(context.PackageName, Resource.Layout.time_and_date_widget_layout);
 
             SetTextViewText(widgetView);
 
@@ -43,10 +43,8 @@ namespace MauiWidgets.Platforms.Android {
         /// Metoda UpdateWidgetText aktualizuje text widgetu.
         /// </summary>
         private void UpdateWidgetText(AppWidgetManager appWidgetManager, Context context) {
-            var me = new ComponentName(context, Java.Lang.Class.FromType(typeof(time_and_date_widget_class)).Name);
-            var widgetView = new RemoteViews(context.PackageName, Resource.Layout.time_and_date_widget_layout);
-            SetTextViewText(widgetView);
-            appWidgetManager.UpdateAppWidget(me, widgetView);
+            ComponentName me = new ComponentName(context, Java.Lang.Class.FromType(typeof(time_and_date_widget_class)).Name);
+            appWidgetManager.UpdateAppWidget(me, BuildRemoteViews(context));
         }
 
         /// <summary>

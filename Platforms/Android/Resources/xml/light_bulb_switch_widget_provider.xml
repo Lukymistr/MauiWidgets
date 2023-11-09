@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
 					android:minWidth="167dp"
 					android:minHeight="30dp"
 					android:updatePeriodMillis="1000"
 					android:resizeMode="horizontal|vertical"
-					android:initialLayout="@layout/time_and_date_widget_layout"
-					android:previewImage="@drawable/time_and_date_widget_image"
+					android:initialLayout="@layout/light_bulb_switch_widget_layout"
+					android:previewImage="@drawable/light_bulb_buttons_and_switch_widget_image"
 					/>

@@ -51,10 +51,16 @@
 
 	<ItemGroup>
 	  <None Remove="Platforms\Android\Resources\drawable\color_press_game_widget_image.png" />
-	  <None Remove="Platforms\Android\Resources\drawable\time_and_date_widget_image.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\light_bulb_buttons_and_switch_widget_image.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\light_bulb_buttons_and_switch_widget_image_off.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\light_bulb_buttons_and_switch_widget_image_on.png" />
+	  <None Remove="Platforms\Android\Resources\drawable\light_bulb_switch_widget_layout.xml" />
 	  <None Remove="Platforms\Android\Resources\layout\color_press_game_widget_layout.xml" />
+	  <None Remove="Platforms\Android\Resources\layout\light_bulb_switch_widget_layout.xml" />
 	  <None Remove="Platforms\Android\Resources\layout\time_and_date_widget_layout.xml" />
 	  <None Remove="Platforms\Android\Resources\xml\color_press_game_widget_provider.xml" />
+	  <None Remove="Platforms\Android\Resources\xml\light_bulb_buttons_widget_provider.xml" />
+	  <None Remove="Platforms\Android\Resources\xml\light_bulb_switch_widget_provider.xml" />
 	  <None Remove="Platforms\Android\Resources\xml\time_and_date_widget_provider.xml" />
 	</ItemGroup>
 
