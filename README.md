@@ -9,25 +9,43 @@
    - [Android](Platforms/Android/)
       - [Resources](Platforms/Android/Resources/)
          - [drawable](Platforms/Android/Resources/drawable/)
-            - [time_and_date_widget_image.png](Platforms/Android/Resources/drawable/time_and_date_widget_image.png)
-               - náhled "time_and_date" widgetu při přidávání na plochu
             - [color_press_game_widget_image.png](Platforms/Android/Resources/drawable/color_press_game_widget_image.png)
                - náhled "color_press_game" widgetu při přidávání na plochu
+            - [light_bulb_buttons_and_switch_widget_image.png](Platforms/Android/Resources/drawable/light_bulb_buttons_and_switch_widget_image.png)
+               - náhled "light_bulb_buttons" a "light_bulb_switch" widgetu při přidávání na plochu
+            - [light_bulb_buttons_and_switch_widget_image_off.png](Platforms/Android/Resources/drawable/light_bulb_buttons_and_switch_widget_image_off.png)
+               - foto pro zhasnutou žárovku
+            - [light_bulb_buttons_and_switch_widget_image_on.png](Platforms/Android/Resources/drawable/light_bulb_buttons_and_switch_widget_image_on.png)
+               - foto pro rozsvícenou žárovku
+            - [time_and_date_widget_image.png](Platforms/Android/Resources/drawable/time_and_date_widget_image.png)
+               - náhled "time_and_date" widgetu při přidávání na plochu
          - [layout](Platforms/Android/Resources/layout)
-            - [time_and_date_widget_layout.xml](Platforms/Android/Resources/layout/time_and_date_widget_layout.xml)
-               - struktura "time_and_date" widgetu
             - [color_press_game_widget_layout.xml](Platforms/Android/Resources/layout/color_press_game_widget_layout.xml)
                - struktura "color_press_game" widgetu
+            - [light_bulb_buttons_widget_layout.xml](Platforms/Android/Resources/layout/light_bulb_buttons_widget_layout.xml)
+               - struktura "light_bulb_buttons" widgetu
+            - [light_bulb_switch_widget_layout.xml](Platforms/Android/Resources/layout/light_bulb_switch_widget_layout.xml)
+               - struktura "light_bulb_switch" widgetu
+            - [time_and_date_widget_layout.xml](Platforms/Android/Resources/layout/time_and_date_widget_layout.xml)
+               - struktura "time_and_date" widgetu
          - [values](Platforms/Android/Resources/values)
             - [colors.xml](Platforms/Android/Resources/values/colors.xml)
                - kódy užitcýh barev (informativní)
          - [xml](Platforms/Android/Resources/xml)
-            - [time_and_date_widget_provider.xml](Platforms/Android/Resources/xml/time_and_date_widget_provider.xml)
-               - struktura celého "time_and_date" widgetu (př. minimální velikost)
             - [color_press_game_widget_provider.xml](Platforms/Android/Resources/xml/color_press_game_widget_provider.xml)
                - struktura celého "color_press_game" widgetu (př. minimální velikost)
-      - [time_and_date_widget_class](Platforms/Android/time_and_date_widget_class.cs)
-         - je zde celé gró "time_and_date" widgetu
+            - [light_bulb_buttons_widget_provider.xml](Platforms/Android/Resources/xml/light_bulb_buttons_widget_provider.xml)
+               - struktura celého "light_bulb_buttons" widgetu (př. minimální velikost)
+            - [light_bulb_switch_widget_provider.xml](Platforms/Android/Resources/xml/light_bulb_switch_widget_provider.xml)
+               - struktura celého "light_bulb_switch" widgetu (př. minimální velikost)
+            - [time_and_date_widget_provider.xml](Platforms/Android/Resources/xml/time_and_date_widget_provider.xml)
+               - struktura celého "time_and_date" widgetu (př. minimální velikost)
+      - [color_press_game_widget_class](Platforms/Android/color_press_game_widget_class.cs)
+         - je zde celé gró "color_press_game" widgetu
+      - [light_bulb_button_widget_class.cs](Platforms/Android/light_bulb_button_widget_class.cs)
+         - je zde celé gró "light_bulb_button" widgetu
+      - [light_bulb_switch_widget_class.cs](Platforms/Android/light_bulb_switch_widget_class.cs)
+         - je zde celé gró "light_bulb_switch" widgetu
       - [color_press_game_widget_class](Platforms/Android/color_press_game_widget_class.cs)
          - je zde celé gró "color_press_game" widgetu
 - [Resources](Resources/)
@@ -74,7 +92,31 @@
       - "#ffffff" (bílá)
 
   - ##### funkcionalita
-    - když se klikne na na blok, tak se jeho text změní na "clicked" a ostatním blokům se text dá na defaultní hodnotu
+    - když se klikne na blok, tak se jeho text změní na "clicked" a ostatním blokům se text dá na defaultní hodnotu
+      
+- #### "light_bulb_buttons"
+  - ##### grafika
+    - Barva textu je "#ffffff" (bílá)
+    - počet bloků je 3
+    - Barvy bloků
+      - "#5a595b" (šedá)
+      - "#5a595b" (šedá)
+      - "#aaaaaa" (světle šedá)
+
+  - ##### funkcionalita
+    - když se klikne na tlačítko on, tak se změní adresa obrázku na rozsvícenou žárovku a když se klikne na tlačítko off, tak se zpět změní na zhasnutou (nekonečně se opakujíc)
+
+- #### "light_bulb_switch"
+  - ##### grafika
+    - Barva textu je "#ffffff" (bílá)
+    - počet bloků je 3
+    - Barvy bloků
+      - "#5a595b" (šedá)
+      - "#5a595b" (šedá)
+      - "#aaaaaa" (světle šedá)
+
+  - ##### funkcionalita
+    - když se klikne na switch, tak se změní adresa obrázku na rozsvícenou žárovku a když znovu tak zpět na zhasnutou (nekonečně se opakujíc)
 
 
    [DATE]: <https://learn.microsoft.com/cs-cz/dotnet/api/system.datetime?view=net-7.0>
