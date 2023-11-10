@@ -66,6 +66,8 @@
    - výchozí grafický kontent aplikace
 - [MainPage.xaml.cs](MainPage.xaml.cs)
    - funkcionalita pro "MainPage.xaml"
+- [OnRecive.txt](OnRecive.txt)
+   - další možnosti při kliknutí na element widgetu
 
 ### Aplikace
 - Defaultní Maui aplikace, klikání na tlačítko

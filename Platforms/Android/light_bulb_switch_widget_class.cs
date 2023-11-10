@@ -54,26 +54,8 @@ namespace MauiWidgets.Platforms.Android {
             if (intent.Action == "switch") {
 
                 //TODO: Dostat atribut Text z "light_bulb_switch_widget_switch"
-
-
-
-                // Dočasné (otevře hlavní okno aplikace)
-                
-                //---------------------------------------------------------------------
-                Intent openAppIntent = new Intent(context, typeof(MainActivity));
-
-
-                // Specify the action to navigate to the MainPage
-                openAppIntent.SetAction("android.intent.action.MAIN");
-                openAppIntent.AddCategory("android.intent.category.LAUNCHER");
-
-                // Start the activity with the intent
-                openAppIntent.SetFlags(ActivityFlags.NewTask);
-                context.StartActivity(openAppIntent);
-                //---------------------------------------------------------------------
-                
-
                
+
 
             }
 

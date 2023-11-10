@@ -1,0 +1,65 @@
+﻿// otevře hlavní okno aplikace
+
+//---------------------------------------------------------------------
+Intent openAppIntent = new Intent(context, typeof(MainActivity));
+
+
+// Specify the action to navigate to the MainPage
+openAppIntent.SetAction("android.intent.action.MAIN");
+openAppIntent.AddCategory("android.intent.category.LAUNCHER");
+
+// Start the activity with the intent
+openAppIntent.SetFlags(ActivityFlags.NewTask);
+context.StartActivity(openAppIntent);
+//---------------------------------------------------------------------
+
+
+
+// Static - updatuje UpdateButtonTextMessage text na click -> následně MainPage.xaml.cs nastaví daný text na text buttonů v MainPage
+
+//---------------------------------------------------------------------
+- bez další třídy
+
+OnReceive metoda:
+
+MessagingCenter.Send<object, int>(this, "UpdateButtonText", click);
+
+- click -- proměná, kterou chceme přepisovat, tak musí být deklarovaná jako statická, jelikož by se při každém kliknutí opět resetovala
+
+MainPage.cs:
+
+InitializeComponent();
+MessagingCenter.Subscribe<object, int>(this, "UpdateButtonText", (sender, arg) => {
+	Update the button text with the received click count
+	CounterBtn.Text = "Click Count: " + arg;
+});
+
+- UpdateButtonText - musí být použitý stejný string jako key
+//---------------------------------------------------------------------
+
+
+
+//---------------------------------------------------------------------
+- přes třídu
+
+vytvoření třídy v main složce (vedle mainPage)
+
+public static class MessagingCenterKeys {
+	public static string UpdateButtonText;
+}
+
+OnReceive metoda:
+
+MessagingCenterKeys.UpdateButtonText = click.ToString(); -- click je int, která má ++ vždy při kliku, může být nahrazena čímkoli 
+MessagingCenter.Send<object, int>(this, MessagingCenterKeys.UpdateButtonText, click);
+
+MainPage.cs:
+
+MessagingCenterKeys.UpdateButtonText = CounterBtn.Text;
+
+MessagingCenter.Subscribe<object, int>(this, MessagingCenterKeys.UpdateButtonText, (sender, arg) => {
+CounterBtn.Text = $"Click Count: {arg}";
+});
+
+- MessagingCenterKeys.UpdateButtonText = CounterBtn.Text; -- jestli je objekt (UpdateButtonText) ze začátku null, tak musí být přiřazena nějaká hodnota
+//---------------------------------------------------------------------

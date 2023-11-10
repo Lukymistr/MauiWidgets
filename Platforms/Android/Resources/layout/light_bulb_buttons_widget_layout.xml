@@ -27,7 +27,8 @@
         android:layout_rowSpan="2"
         android:columnCount="1"
         android:rowCount="1"
-        android:background="@android:color/darker_gray">
+        android:background="@android:color/darker_gray"
+        >
 
         <ImageView
             android:gravity="right"
